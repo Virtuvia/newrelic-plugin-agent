@@ -17,6 +17,7 @@ available = {
     'php_apc': 'newrelic_plugin_agent.plugins.php_apc.APC',
     'php_apcu': 'newrelic_plugin_agent.plugins.php_apcu.APCU',
     'php_fpm': 'newrelic_plugin_agent.plugins.php_fpm.FPM',
+    'php_opc': 'newrelic_plugin_agent.plugins.php_opc.OPC',
     'postgresql': 'newrelic_plugin_agent.plugins.postgresql.PostgreSQL',
     'rabbitmq': 'newrelic_plugin_agent.plugins.rabbitmq.RabbitMQ',
     'redis': 'newrelic_plugin_agent.plugins.redis.Redis',
