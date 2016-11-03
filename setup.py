@@ -24,12 +24,12 @@ if sys.version_info < (2, 7, 0):
     install_requires.append('importlib')
 
 setup(name='newrelic_plugin_agent',
-      version='1.3.0',
+      version='1.4.0',
       description='Python based agent for collecting metrics for NewRelic',
-      url='https://github.com/MeetMe/newrelic-plugin-agent',
+      url='https://github.com/madisoft/newrelic-plugin-agent',
       packages=['newrelic_plugin_agent', 'newrelic_plugin_agent.plugins'],
-      author='Gavin M. Roy',
-      author_email='gavinmroy@gmail.com',
+      author='Gavin M. Roy, Angelo Compagnucci',
+      author_email='gavinmroy@gmail.com, angelo.compagnucci@madisoft.it',
       license='BSD',
       entry_points={'console_scripts': console_scripts},
       data_files=[(key, data_files[key]) for key in data_files.keys()],

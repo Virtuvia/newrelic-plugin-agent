@@ -5,6 +5,7 @@ An agent that polls supported backend systems and submits the results to the
 NewRelic platform. Currently supported backend systems are:
 
 - Alternative PHP Cache
+- PHP APC User Cache
 - Apache HTTP Server
 - CouchDB
 - Elasticsearch
@@ -13,6 +14,7 @@ NewRelic platform. Currently supported backend systems are:
 - MongoDB
 - Nginx
 - pgBouncer
+- PHP OPC
 - PHP FPM
 - PostgreSQL
 - RabbitMQ
@@ -210,6 +212,10 @@ Enable the Nginx ``stub_status`` setting on the default site in your configurati
 
 If you are monitoring Nginx via a HTTPS connection you can use the ``verify_ssl_cert`` configuration value in the httpd configuration section to disable SSL certificate verification.
 
+OPC Installation Notes
+----------------------
+Copy the ``opc-nrp.php`` script to a directory that can be served by your web server or ``php-fpm`` application. Edit the ``newrelic-plugin-agent`` configuration to point to the appropriate URL.
+
 pgBouncer Installation Notes
 ----------------------------
 The user specified must be a stats user.
@@ -375,6 +381,12 @@ Configuration Example
          #username: foo
          #password: bar
          #verify_ssl_cert: true
+
+      php_apcu:
+        scheme: http
+        host: localhost
+        port: 80
+        path: /opc-nrp.php
 
       php_fpm:
         - name: fpm-pool
