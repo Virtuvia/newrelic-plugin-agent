@@ -112,6 +112,10 @@ APC Installation Notes
 ----------------------
 Copy the ``apc-nrp.php`` script to a directory that can be served by your web server or ``php-fpm`` application. Edit the ``newrelic-plugin-agent`` configuration to point to the appropriate URL.
 
+APCU Installation Notes
+----------------------
+Copy the ``apcu-nrp.php`` script to a directory that can be served by your web server or ``php-fpm`` application. Edit the ``newrelic-plugin-agent`` configuration to point to the appropriate URL.
+
 Apache HTTPd Installation Notes
 -------------------------------
 Enable the HTTPd server status page in the default virtual host. The following example configuration snippet for Apache HTTPd 2.2 demonstrates how to do this:
@@ -361,7 +365,16 @@ Configuration Example
          path: /apc-nrp.php
          #username: foo
          #password: bar
-         #verify_ssl_cert: t
+         #verify_ssl_cert: true
+
+      php_apcu:
+         scheme: http
+         host: localhost
+         port: 80
+         path: /apcu-nrp.php
+         #username: foo
+         #password: bar
+         #verify_ssl_cert: true
 
       php_fpm:
         - name: fpm-pool

@@ -15,6 +15,7 @@ available = {
     'nginx': 'newrelic_plugin_agent.plugins.nginx.Nginx',
     'pgbouncer': 'newrelic_plugin_agent.plugins.pgbouncer.PgBouncer',
     'php_apc': 'newrelic_plugin_agent.plugins.php_apc.APC',
+    'php_apcu': 'newrelic_plugin_agent.plugins.php_apcu.APCU',
     'php_fpm': 'newrelic_plugin_agent.plugins.php_fpm.FPM',
     'postgresql': 'newrelic_plugin_agent.plugins.postgresql.PostgreSQL',
     'rabbitmq': 'newrelic_plugin_agent.plugins.rabbitmq.RabbitMQ',
