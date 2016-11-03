@@ -12,7 +12,7 @@ LOGGER = logging.getLogger(__name__)
 
 class OPC(base.JSONStatsPlugin):
 
-    GUID = 'com.meetme.newrelic_php_opc_agent'
+    GUID = 'it.madisoft.newrelic_php_opc_agent'
 
     def add_datapoints(self, stats):
         """Add all of the data points for a node
