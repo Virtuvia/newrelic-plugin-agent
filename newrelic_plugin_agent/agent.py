@@ -10,9 +10,18 @@ import os
 import requests
 import socket
 import sys
-import Queue as queue
 import threading
 import time
+
+is_py2 = sys.version[0] == '2'
+if is_py2:
+    # Python 2.7 uses `Queue` (first letter upper case)
+    # https://docs.python.org/2/library/queue.html
+    import Queue as queue
+else:
+    # Python 3.x uses `queue` (first letter lower case)
+    # https://docs.python.org/3.5/library/queue.html
+    import queue as queue
 
 from newrelic_plugin_agent import __version__
 from newrelic_plugin_agent import plugins
