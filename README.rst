@@ -382,7 +382,7 @@ Configuration Example
          #password: bar
          #verify_ssl_cert: true
 
-      php_apcu:
+      php_opc:
         scheme: http
         host: localhost
         port: 80
