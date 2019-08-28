@@ -14,6 +14,11 @@ try:
 except ImportError:
     from urlparse import urlunparse
 
+try:
+    basestring
+except NameError:
+    basestring = str
+
 LOGGER = logging.getLogger(__name__)
 
 
