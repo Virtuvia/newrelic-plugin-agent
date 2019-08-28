@@ -9,7 +9,10 @@ import requests
 import socket
 import tempfile
 import time
-import urlparse
+try:
+    from urllib.parse import urlunparse
+except ImportError:
+    from urlparse import urlunparse
 
 LOGGER = logging.getLogger(__name__)
 
@@ -381,7 +384,7 @@ class HTTPStatsPlugin(Plugin):
         if self.config.get('port'):
             netloc += ':%s' % self.config['port']
 
-        return urlparse.urlunparse((self.config.get('scheme', 'http'),
+        return urlunparse((self.config.get('scheme', 'http'),
                                     netloc,
                                     self.config.get('path', self.DEFAULT_PATH),
                                     None,
